@@ -8,19 +8,19 @@ open_list = []
 path_list = []
 
 # Reading the start and goal position from the user
-# x = int(input("Please enter start x position: "))
-# y = int(input("Please enter start y position: "))
-# x_i = np.array([y,x])
-# x = int(input("Please enter goal x position: "))
-# y = int(input("Please enter goal y position: "))
-# x_g = np.array([y,x])
+x = int(input("Please enter start x position: "))
+y = int(input("Please enter start y position: "))
+x_i = np.array([y,x])
+x = int(input("Please enter goal x position: "))
+y = int(input("Please enter goal y position: "))
+x_g = np.array([y,x])
 
 # Start recording the time to check time of execution
 start = time.time()
 
 # Test Start and goal position
-x_i = np.array([15,16])
-x_g = np.array([35, 582])
+# x_i = np.array([15,16])
+# x_g = np.array([35, 582])
 # x_g = np.array([235, 580])
 
 # Flag to enable start and goal position visualization
