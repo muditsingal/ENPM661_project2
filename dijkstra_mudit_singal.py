@@ -31,6 +31,11 @@ x_max = 600
 y_min = 0
 y_max = 250
 
+video_writer_fourcc = cv2.VideoWriter_fourcc(*'mp4v') 
+# video_writer_fourcc = cv2.VideoWriter_fourcc(*'MPEG') 
+# Creating a VideoWriter object
+video = cv2.VideoWriter('path_animation.avi', video_writer_fourcc, 30, (600, 250))
+
 class node:
 	def __init__(self, data):
 		self.data = data
@@ -269,7 +274,11 @@ path_list = path_list[::-1]
 for i in range(len(path_list)):
 	# print(path_list[i, 0])
 	img[y_max - path_list[i][0], path_list[i][1]] = np.array([0, 0, 0])
+	video.write(img)
+	# video.write(cv2.resize(img, dsize=(600, 250)))
 
+
+video.release()
 
 print(iters)
 
